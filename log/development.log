@@ -1,0 +1,384 @@
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrailsDatabases (20221011010550)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "trails_databases" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "location" text, "weather" text, "distance" float, "difficulty" varchar, "activity" text, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221011010550"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-11 01:06:09.178173"], ["updated_at", "2022-10-11 01:06:09.178173"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrailsDatabase Create (0.4ms)[0m  [1m[32mINSERT INTO "trails_databases" ("title", "location", "weather", "distance", "difficulty", "activity", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Garden of the Gods Outer Loop"], ["location", "1805 N 30th St, Colorado Spring, CO 80904, United States"], ["weather", "Sunny and dry"], ["distance", 6.3], ["difficulty", "easy"], ["activity", "hiking"], ["description", "2h 37 min avg loop good for birding, hiking and walking"], ["created_at", "2022-10-11 01:10:17.118240"], ["updated_at", "2022-10-11 01:10:17.118240"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrailsDatabase Create (0.2ms)[0m  [1m[32mINSERT INTO "trails_databases" ("title", "location", "weather", "distance", "difficulty", "activity", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Sand canyon, Mesa, Greenlee, Red Rock Canyon Loop"], ["location", "Colorado Springs, Colorado"], ["weather", "Year round- Open dry and sunny currently"], ["distance", 5.4], ["difficulty", "moderate"], ["activity", "hiking and horseback riding"], ["description", "2h 28 min avg hike with horseback riding, birding and hiking"], ["created_at", "2022-10-11 01:10:17.128501"], ["updated_at", "2022-10-11 01:10:17.128501"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrailsDatabase Create (0.3ms)[0m  [1m[32mINSERT INTO "trails_databases" ("title", "location", "weather", "distance", "difficulty", "activity", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ouray Perimeter Trail"], ["location", "Ouray, Colorado"], ["weather", "40*F degrees but sunny, moderately damp conditions"], ["distance", 6.0], ["difficulty", "easy"], ["activity", "hiking"], ["description", "3 h 19 min avg hike allowing hikers to explore all of Ouray’s spectacular sights"], ["created_at", "2022-10-11 01:10:17.136291"], ["updated_at", "2022-10-11 01:10:17.136291"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrailsDatabase Create (0.2ms)[0m  [1m[32mINSERT INTO "trails_databases" ("title", "location", "weather", "distance", "difficulty", "activity", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ice Lake Basin"], ["location", "Silverton, Colorado"], ["weather", "40*F with light chance of precipitation"], ["distance", 8.3], ["difficulty", "hard"], ["activity", "backpacking and hiking"], ["description", "Challenging hike offering immaculate views of Silverton with multiple mountain-top lakes taking average of 5h 25 min"], ["created_at", "2022-10-11 01:10:17.147066"], ["updated_at", "2022-10-11 01:10:17.147066"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrailsDatabase Create (0.2ms)[0m  [1m[32mINSERT INTO "trails_databases" ("title", "location", "weather", "distance", "difficulty", "activity", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "The Manitou Incline"], ["location", "444 Ruxton Ave, Manitou Springs,Colorado"], ["weather", "Warm and dry; May through October best time to try"], ["distance", 4.0], ["difficulty", "hard"], ["activity", "hiking"], ["description", "3 h 14 min avg staircase hike boasting beautiful views of Manitou"], ["created_at", "2022-10-11 01:10:17.155318"], ["updated_at", "2022-10-11 01:10:17.155318"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2022-10-10 19:14:01 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  [1m[36mTrailsDatabase Load (0.2ms)[0m  [1m[34mSELECT "trails_databases".* FROM "trails_databases"[0m
+  ↳ app/views/pages/trails.html.erb:3
+  Rendered pages/trails.html.erb within layouts/application (Duration: 25.9ms | Allocations: 18694)
+  Rendered layout layouts/application.html.erb (Duration: 319.5ms | Allocations: 117293)
+Completed 200 OK in 340ms (Views: 325.1ms | ActiveRecord: 1.0ms | Allocations: 123776)
+
+
+Started GET "/" for ::1 at 2022-10-10 19:19:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered pages/trails.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3390)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3464)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 8676)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/myles/Desktop/trail/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.4/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/missing_attachable
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/remote_image):
+    2: 
+    3: <html>
+    4:    
+    5:     <%= render "layouts/navbar" %>
+    6:     <%= yield %>
+    7:     
+    8:    
+  
+app/views/pages/trails.html.erb:5
+Started GET "/" for ::1 at 2022-10-10 19:22:04 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered pages/trails.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2862)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2936)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 8148)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/myles/Desktop/trail/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.4/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/missing_attachable
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/remote_image):
+    2: 
+    3: <html>
+    4:    
+    5:     <%= render "layouts/navbar" %>
+    6:     <%= yield %>
+    7:     
+    8:    
+  
+app/views/pages/trails.html.erb:5
+Started GET "/" for ::1 at 2022-10-10 19:22:35 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2772)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2846)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 7642)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/myles/Desktop/trail/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-7.0.4/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/missing_attachable
+               action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/remote_image):
+    1: <html>
+    2: 
+    3:    	<%= render "layouts/navbar" %>
+    4:     	<%= yield %>
+    5:    
+    6:    
+  
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2022-10-10 19:24:22 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 18.9ms | Allocations: 5160)
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.1ms | Allocations: 5632)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5706)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 10502)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_index_path' for #<ActionView::Base:0x0000000000b658>
+Did you mean?  home_path):
+     5: 		<h1><Center>Welcome Explorer!</Center></h1>
+     6: 		<nav>
+     7: 			<ul>
+     8: 				<li><%= link_to "Home", home_index_path %></li>
+     9: 				<li><%= link_to "Trails", home_trails_path %></li>
+    10: 				<li><%= link_to "About", home_about_path %></li>
+    11: 				<li><%= link_to "Account", home_account_path %></li>
+  
+app/views/layouts/_navbar.html.erb:8
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2022-10-10 19:27:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 18.8ms | Allocations: 5114)
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.1ms | Allocations: 5609)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 5683)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 10479)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pages_home_path' for #<ActionView::Base:0x0000000000b658>):
+     5: 		<h1><Center>Welcome Explorer!</Center></h1>
+     6: 		<nav>
+     7: 			<ul>
+     8: 				<li><%= link_to "Home", pages_home_path %></li>
+     9: 				<li><%= link_to "Trails", pages_trails_path %></li>
+    10: 				<li><%= link_to "Account", pages_account_path %></li>
+    11: 			</ul>
+  
+app/views/layouts/_navbar.html.erb:8
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2022-10-10 19:28:25 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 14.8ms | Allocations: 5095)
+  Rendered pages/home.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5590)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5664)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 10460)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pages_home' for #<ActionView::Base:0x0000000000b658>):
+     5: 		<h1><Center>Welcome Explorer!</Center></h1>
+     6: 		<nav>
+     7: 			<ul>
+     8: 				<li><%= link_to "Home", pages_home %></li>
+     9: 				<li><%= link_to "Trails", pages_trails_path %></li>
+    10: 				<li><%= link_to "Account", pages_account_path %></li>
+    11: 			</ul>
+  
+app/views/layouts/_navbar.html.erb:8
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2022-10-10 19:28:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 22.4ms | Allocations: 5144)
+  Rendered pages/home.html.erb within layouts/application (Duration: 23.9ms | Allocations: 5639)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 5713)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 10509)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_page' for #<ActionView::Base:0x0000000000b658>
+Did you mean?  home_path):
+     5: 		<h1><Center>Welcome Explorer!</Center></h1>
+     6: 		<nav>
+     7: 			<ul>
+     8: 				<li><%= link_to "Home", home_page %></li>
+     9: 				<li><%= link_to "Trails", pages_trails_path %></li>
+    10: 				<li><%= link_to "Account", pages_account_path %></li>
+    11: 			</ul>
+  
+app/views/layouts/_navbar.html.erb:8
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2022-10-10 19:29:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 21.7ms | Allocations: 5189)
+  Rendered pages/home.html.erb within layouts/application (Duration: 23.1ms | Allocations: 5684)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 5758)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 10554)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pages_trails_path' for #<ActionView::Base:0x0000000000b658>):
+     6: 		<nav>
+     7: 			<ul>
+     8: 				<li><%= link_to "Home", home_path %></li>
+     9: 				<li><%= link_to "Trails", pages_trails_path %></li>
+    10: 				<li><%= link_to "Account", pages_account_path %></li>
+    11: 			</ul>
+    12: 		</nav>
+  
+app/views/layouts/_navbar.html.erb:9
+app/views/pages/home.html.erb:3
+Started GET "/" for ::1 at 2022-10-10 19:29:27 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 298)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | Allocations: 40500)
+Completed 200 OK in 87ms (Views: 80.0ms | ActiveRecord: 0.0ms | Allocations: 45325)
+
+
+Started GET "/trails" for ::1 at 2022-10-10 19:29:34 -0600
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 104)
+  [1m[36mTrailsDatabase Load (0.2ms)[0m  [1m[34mSELECT "trails_databases".* FROM "trails_databases"[0m
+  ↳ app/views/pages/trails.html.erb:11
+  Rendered pages/trails.html.erb within layouts/application (Duration: 29.4ms | Allocations: 18621)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 20933)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.9ms | Allocations: 21681)
+
+
+Started GET "/account" for ::1 at 2022-10-10 19:29:35 -0600
+Processing by PagesController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/account.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 104)
+  Rendered pages/account.html.erb within layouts/application (Duration: 3.1ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2621)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 2943)
+
+
+Started GET "/home" for ::1 at 2022-10-10 19:29:36 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 97)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2440)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2689)
+
+
+Started GET "/trails" for ::1 at 2022-10-10 19:29:49 -0600
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 97)
+  [1m[36mTrailsDatabase Load (0.2ms)[0m  [1m[34mSELECT "trails_databases".* FROM "trails_databases"[0m
+  ↳ app/views/pages/trails.html.erb:11
+  Rendered pages/trails.html.erb within layouts/application (Duration: 2.7ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3029)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 3294)
+
+
+Started GET "/trails" for ::1 at 2022-10-10 19:44:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 298)
+  [1m[36mTrailsDatabase Load (0.2ms)[0m  [1m[34mSELECT "trails_databases".* FROM "trails_databases"[0m
+  ↳ app/views/pages/trails.html.erb:14
+  Rendered pages/trails.html.erb within layouts/application (Duration: 22.1ms | Allocations: 19281)
+  Rendered layout layouts/application.html.erb (Duration: 81.7ms | Allocations: 53457)
+Completed 200 OK in 94ms (Views: 84.3ms | ActiveRecord: 0.8ms | Allocations: 58699)
+
+
+Started GET "/trails" for ::1 at 2022-10-10 19:46:27 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 298)
+  [1m[36mTrailsDatabase Load (0.2ms)[0m  [1m[34mSELECT "trails_databases".* FROM "trails_databases"[0m
+  ↳ app/views/pages/trails.html.erb:14
+  Rendered pages/trails.html.erb within layouts/application (Duration: 19.1ms | Allocations: 19311)
+  Rendered layout layouts/application.html.erb (Duration: 73.5ms | Allocations: 53361)
+Completed 200 OK in 83ms (Views: 75.1ms | ActiveRecord: 0.8ms | Allocations: 58603)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-10-12 14:52:46 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 298)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 34639)
+Completed 200 OK in 60ms (Views: 52.9ms | ActiveRecord: 0.0ms | Allocations: 39465)
+
+
+Started GET "/trails" for ::1 at 2022-10-12 14:52:49 -0600
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 104)
+  [1m[36mTrailsDatabase Load (0.6ms)[0m  [1m[34mSELECT "trails_databases".* FROM "trails_databases"[0m
+  ↳ app/views/pages/trails.html.erb:14
+  Rendered pages/trails.html.erb within layouts/application (Duration: 29.5ms | Allocations: 18838)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 21133)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 2.0ms | Allocations: 21880)
+
+
+Started GET "/account" for ::1 at 2022-10-12 14:52:52 -0600
+Processing by PagesController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/account.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 104)
+  Rendered pages/account.html.erb within layouts/application (Duration: 3.9ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2614)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 2936)
+
+
+Started GET "/home" for ::1 at 2022-10-12 14:52:53 -0600
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 97)
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2434)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2682)
+
+
