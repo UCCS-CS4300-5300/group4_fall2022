@@ -5549,3 +5549,88 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 5347)
 
 
+Started GET "/users/sign_up" for 172.17.0.1 at 2022-11-28 21:12:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 233)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 650)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 6141)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 41142)
+Completed 200 OK in 37ms (Views: 28.2ms | ActiveRecord: 0.2ms | Allocations: 63032)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-28 21:12:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 1213)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2012)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4265)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 5079)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-28 21:12:40 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 847)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1359)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3580)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 3829)
+
+
+Started GET "/account" for 172.17.0.1 at 2022-11-28 21:12:43 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/account.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 858)
+  Rendered pages/account.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3315)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 3639)
+
+
+Started GET "/account" for 172.17.0.1 at 2022-11-28 21:12:45 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/account.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 847)
+  Rendered pages/account.html.erb within layouts/application (Duration: 1.9ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3128)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3377)
+
+
+Started GET "/account" for 172.17.0.1 at 2022-11-28 21:13:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/account.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 16.2ms | Allocations: 22309)
+  Rendered pages/account.html.erb within layouts/application (Duration: 16.8ms | Allocations: 22823)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 36856)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 41720)
+
+
+Started GET "/trails" for 172.17.0.1 at 2022-11-28 21:13:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#trails as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/trails.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 831)
+  Rendered pages/trails.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1842)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4067)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4701)
+
+
+Started GET "/application.css" for 172.17.0.1 at 2022-11-28 21:13:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/application.css"):
+  
