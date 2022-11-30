@@ -12,6 +12,7 @@
 
     	<table border: 1px solid;>
     		<tr>
+			   <% if user_signed_in? %>
     			<th>Name</th>
         		<th>Address</th>
         		<th>difficulty</th>
@@ -52,7 +53,7 @@
       		<td> Hard </td>
       		<td> Hiking </td>	
       	</tr>
-  			 
+  	 <% end %>
 </html>
 
 
