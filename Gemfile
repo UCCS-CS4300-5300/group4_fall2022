@@ -15,7 +15,6 @@ gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-gem 'simplecov', require: false, group: :test
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -63,13 +62,17 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+  
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
 
 group :test do
   gem 'cucumber-rails', require: false
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
   gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'simplecov', require: false
 end
