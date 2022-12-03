@@ -15,6 +15,9 @@ SimpleCov.start 'rails' do
 end
 
 require File.expand_path('../config/environment', __dir__)
+
+require'devise'
+require File.expand_path("spec/support/controller_macros.rb")
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
