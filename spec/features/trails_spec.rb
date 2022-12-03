@@ -16,6 +16,7 @@ RSpec.feature "Trails", type: :feature do
       signInFields
      expect(page).to have_content("Trails in Colorado.")
     end
+    end
 
     context "Check trails have content" do
     before(:each) do
@@ -23,5 +24,5 @@ RSpec.feature "Trails", type: :feature do
      expect(page).to have_content("Garden of the Gods Outer Loop")
     end
 
-    
+    end
 end
